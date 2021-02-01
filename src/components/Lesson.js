@@ -6,20 +6,22 @@ class Lesson extends React.Component {
     this.state = {isModalOpen: false};
   }
 
-  closeModal() {
-    this.setState({isModalOpen: false});
-  }
-
-  openModal() {
-    this.setState({isModalOpen: true});
+  toggleModal() {
+    this.setState({isModalOpen: !this.state.isModalOpen});
   }
 
   render() {
     let modal;
     if(this.state.isModalOpen) {
       modal = (
-        <div className='modal'>
-          <div className='modal-inner'>
+        <div 
+          className='modal'
+          onClick={() => {this.toggleModal()}}
+        >
+          <div
+            className='modal-inner'
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className='modal-header'>
               <div className='modal-introduction'>
                 <h2>{this.props.name}</h2>
@@ -27,7 +29,7 @@ class Lesson extends React.Component {
               </div>
               <button
                 className='modal-close-btn'
-                onClick={() => {this.closeModal()}}
+                onClick={() => {this.toggleModal()}}
               >
                 Close
               </button>
@@ -40,7 +42,7 @@ class Lesson extends React.Component {
       <div className="lesson-card">
         <div 
           className="lesson-item"
-          onClick={() => {this.openModal()}}
+          onClick={() => {this.toggleModal()}}
         >
           <p>{this.props.name}</p>
           <img 
