@@ -8,24 +8,24 @@ class Main extends React.Component {
       {
       name: 'HTML & CSS',
       image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/html.svg',
-      introduction: 'HTMLとCSSについての勉強をします',
+      introduction: 'Learn about HTML & CSS',
       },
       {
       name: 'JavaScript',
       image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/es6.svg',
-      introduction: 'JavaScript(ES6)についての勉強をします',
+      introduction: 'Learn about JavaScript(ES6)',
       },
       {
       name: 'React',
       image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/react.svg',
-      introduction: 'Reactの勉強をします',
+      introduction: 'Learn about React.js',
       }
     ];
     return(
       <div className='main-wrapper'>
         <div className='main'>
           <div className='lesson-container'>
-            <h3>学べるレッスン</h3>
+            <h3>Lessons</h3>
             {lessonItems.map((lessonItem) => {
               return(
                 <Lesson
