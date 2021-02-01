@@ -1,5 +1,6 @@
 import React from 'react';
 import Lesson from './Lesson';
+import ContactForm from './ContactForm';
 
 class Main extends React.Component {
   render() {
@@ -35,6 +36,7 @@ class Main extends React.Component {
               );
             })}
           </div>
+          <ContactForm />
         </div>
       </div>
     )
