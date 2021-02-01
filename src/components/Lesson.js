@@ -3,7 +3,7 @@ import React from 'react';
 class Lesson extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isModalOpen: false};
+    this.state = {isModalOpen: false}
   }
 
   toggleModal() {
@@ -27,12 +27,6 @@ class Lesson extends React.Component {
                 <h2>{this.props.name}</h2>
                 <p>{this.props.introduction}</p>
               </div>
-              <button
-                className='modal-close-btn'
-                onClick={() => {this.toggleModal()}}
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
